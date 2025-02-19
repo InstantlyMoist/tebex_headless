@@ -796,6 +796,8 @@ export class TebexHeadless {
         package_id: number,
         quantity: number,
         type?: PackageType,
+        target_username_id?: string,
+        target_username?: string,
         variable_data?: KeyValuePair<string, any>
     ): Promise<Basket> {
         const { data }: Data<Basket> = await Request(
@@ -810,6 +812,8 @@ export class TebexHeadless {
                 package_id,
                 quantity,
                 type,
+                target_username_id,
+                target_username,
                 variable_data,
             }
         );
